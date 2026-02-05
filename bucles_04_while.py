@@ -22,23 +22,25 @@ jugar_de_nuevo = "si"
 # BUCLE PRINCIPAL: Se repite mientras el usuario quiera seguir jugando
 # Este while controla todo el flujo del juego
 while jugar_de_nuevo == "si":
-    numero_secreto = random.randint(1, 50)
+    numero_secreto = random.randint(1, 100)
     intentos = 0
+    max_intentos = 7
     adivinado = False
     
-    print("\nHe pensado en un número entre 1 y 50")
+    print("\nHe pensado en un número entre 1 y 100")
     print("¡Intenta adivinarlo!")
+    print(f"Tienes un máximo de {max_intentos} intentos.")
     
     # BUCLE DE JUEGO: Se ejecuta hasta que adivinado sea True
     # La condición "not adivinado" significa "mientras NO haya adivinado"
-    # Este bucle terminará cuando el usuario acierte el número
-    while not adivinado:
+    # Este bucle terminará cuando el usuario acierte el número o se exceda el número máximo de intentos
+    while not adivinado and intentos < max_intentos:
         try:
             intento = int(input("\nIngresa tu número: "))
 
 
-            if intento < 1 or intento > 50:
-                print(" Por favor ingresa un número entre 1 y 50")
+            if intento < 1 or intento > 100:
+                print(" Por favor ingresa un número entre 1 y 100")
                 continue  # Vuelve al inicio del bucle sin contar este intento
 
             intentos += 1  # Incrementamos el contador en cada vuelta del bucle
@@ -54,7 +56,7 @@ while jugar_de_nuevo == "si":
                     print("¡Muy bien! ")
                 else:
                     print("¡Lo lograste! ")
-                    
+                break  # Salimos del bucle ya que se adivinó el número  
             elif intento < numero_secreto:
                 # El bucle continúa porque adivinado sigue siendo False
                 print(" El número es MAYOR. Intenta de nuevo.")
@@ -63,6 +65,9 @@ while jugar_de_nuevo == "si":
 
         except ValueError:
             print(" Por favor ingresa solo números")
+    
+    if not adivinado:
+        print(f"\n Lo siento, no lograste adivinar el número. Era {numero_secreto}")   
   
     
     print("\n" + "-" * 50)
