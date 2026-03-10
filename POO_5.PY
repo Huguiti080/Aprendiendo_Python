@@ -90,7 +90,8 @@ print(repr(desarrollador1))
 print(f"Honorarios de {consultor1.nombre}: {consultor1.calcular_honorarios()} dolares")
 print(f"Salario total de {freelancer1.nombre}: {freelancer1.calcular_salario()} dolares")
 
-print(f"Orden de resolución de métodos (MRO) de FreelancerDev: {FreelancerDev.__mro__}")
+print(f"Orden de resolución de métodos (MRO) de FreelancerDev: {FreelancerDev.__mro__}"
+)
 
 try:
     empleado_invalido = Empleado("Ana", 17, 2500)
