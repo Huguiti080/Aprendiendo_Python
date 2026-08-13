@@ -3,7 +3,7 @@
 # TEMA: Operadores en Python
 # ====================================
 
-print("🛒 === BIENVENIDO AL SUPERMERCADO === 🛒\n")
+print(" === BIENVENIDO AL SUPERMERCADO === \n")
 
 # ====================================
 # OPERADORES ARITMÉTICOS
@@ -28,10 +28,10 @@ subtotal_pan = precio_pan * cantidad_pan
 
 total_sin_descuento = subtotal_manzanas + subtotal_leche + subtotal_pan  # Suma
 
-print(f"\n📊 Subtotal manzanas: ${subtotal_manzanas:.2f}")
-print(f"📊 Subtotal leche: ${subtotal_leche:.2f}")
-print(f"📊 Subtotal pan: ${subtotal_pan:.2f}")
-print(f"\n💵 TOTAL SIN DESCUENTO: ${total_sin_descuento:.2f}")
+print(f"\n Subtotal manzanas: ${subtotal_manzanas:.2f}")
+print(f" Subtotal leche: ${subtotal_leche:.2f}")
+print(f" Subtotal pan: ${subtotal_pan:.2f}")
+print(f"\n TOTAL SIN DESCUENTO: ${total_sin_descuento:.2f}")
 
 # ====================================
 # OPERADORES DE COMPARACIÓN Y LÓGICOS
@@ -52,13 +52,13 @@ descuento_especial = es_estudiante or es_adulto_mayor
 
 if tiene_descuento and descuento_especial:  # Operador lógico AND
     descuento = total_sin_descuento * 0.20  # 20% de descuento
-    print("🎉 ¡Felicidades! Tienes 20% de descuento")
+    print(" ¡Felicidades! Tienes 20% de descuento")
 elif tiene_descuento:
     descuento = total_sin_descuento * 0.10  # 10% de descuento
-    print("✨ Tienes 10% de descuento por compra mayor a $100")
+    print(" Tienes 10% de descuento por compra mayor a $100")
 elif descuento_especial:
     descuento = total_sin_descuento * 0.05  # 5% de descuento
-    print("👍 Tienes 5% de descuento especial")
+    print(" Tienes 5% de descuento especial")
 else:
     descuento = 0
     print("Sin descuento esta vez")
@@ -74,7 +74,7 @@ print(f"\n--- SECCIÓN 3: OPCIONES DE PAGO ---\n")
 meses = int(input("¿En cuántos meses quieres pagar? (1, 3, 6, 12): "))
 
 pago_mensual = total_con_descuento / meses  # División normal
-print(f"💳 Pago mensual: ${pago_mensual:.2f}")
+print(f" Pago mensual: ${pago_mensual:.2f}")
 
 # Módulo (%) - para saber si hay residuo
 productos_totales = int(cantidad_leche + cantidad_pan)
@@ -82,8 +82,8 @@ productos_por_bolsa = 5
 bolsas_necesarias = productos_totales // productos_por_bolsa  # División entera
 productos_sobrantes = productos_totales % productos_por_bolsa  # Módulo
 
-print(f"\n📦 Necesitas {bolsas_necesarias} bolsas completas")
-print(f"📦 Sobran {productos_sobrantes} productos")
+print(f"\n Necesitas {bolsas_necesarias} bolsas completas")
+print(f" Sobran {productos_sobrantes} productos")
 
 # Potencia (**)
 puntos_base = 10
@@ -95,7 +95,7 @@ print(f"\n⭐ Puntos ganados: {puntos_ganados} puntos")
 # ====================================
 
 print("\n" + "="*50)
-print("🧾 TICKET DE COMPRA")
+print(" TICKET DE COMPRA")
 print("="*50)
 print(f"Subtotal:          ${total_sin_descuento:.2f}")
 print(f"Descuento (-):     ${descuento:.2f}")
@@ -122,4 +122,4 @@ print(f"Compra <= $500: {total_con_descuento <= 500}")
 no_es_estudiante = not es_estudiante
 print(f"\n¿NO eres estudiante?: {no_es_estudiante}")
 
-print("\n✅ ¡Gracias por tu compra! Vuelve pronto 🛒")
+print("\n ¡Gracias por tu compra! Vuelve pronto ")
